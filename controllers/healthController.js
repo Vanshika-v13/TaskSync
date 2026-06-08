@@ -10,7 +10,7 @@ const getHealth = (req, res) => {
   };
 
   res.status(200).json({
-    status: 'success',
+    success: true,
     message: 'Task Manager API is running',
     environment: process.env.NODE_ENV || 'development',
     database: dbStatus[dbState] || 'unknown',
