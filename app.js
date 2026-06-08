@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes');
+const taskRoutes = require('./routes/task.routes');
 const notFound = require('./middleware/notFound');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -9,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', routes);
+app.use('/api/v1/tasks', taskRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
