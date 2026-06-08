@@ -189,6 +189,7 @@ PORT=5000
 MONGODB_URI=mongodb://localhost:27017/taskmanager
 JWT_SECRET=your_super_secret_jwt_key
 JWT_EXPIRES_IN=7d
+CLIENT_URL=https://task-sync-olive.vercel.app
 ```
 
 ### Frontend (`.env` in `frontend/` directory)
