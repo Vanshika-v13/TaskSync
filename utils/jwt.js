@@ -14,4 +14,8 @@ const signToken = (userId) => {
   });
 };
 
-module.exports = { signToken, getJwtSecret };
+const verifyToken = (token) => {
+  return jwt.verify(token, getJwtSecret());
+};
+
+module.exports = { signToken, verifyToken, getJwtSecret };
